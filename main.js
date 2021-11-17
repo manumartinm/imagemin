@@ -2,14 +2,18 @@ import imagemin from 'imagemin'
 import imageminJpegtran from 'imagemin-jpegtran'
 import imageminMozjpeg from 'imagemin-mozjpeg'
 
-const files = await imagemin(['./images/*.{jpg,png}'], {
-	destination: './optimized',
-	plugins: [
-		imageminJpegtran(),
-        imageminMozjpeg({
-			quality: 70
-        })
-	]
-})
+const quality = process.argv[2] || 70
 
-console.log(files);
+try {
+	await imagemin(['./images/*.{jpg,png}'], {
+		destination: './optimized',
+		plugins: [
+			imageminJpegtran(),
+			imageminMozjpeg({
+				quality
+			})
+		]
+	})	
+} catch (e) {
+	console.error(e)
+}
