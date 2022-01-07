@@ -1,19 +1,21 @@
 {
-  "name": "Imagemin",
+  "name": "imagemin",
   "version": "1.0.0",
   "description": "",
+  "type":"module",
   "main": "main.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.0.0",
+    "figlet": "^1.5.2",
     "imagemin": "^8.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.2"
+    "inquirer": "^8.2.0"
   }
 }
