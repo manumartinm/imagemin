@@ -25,14 +25,14 @@ const queryParams = () => {
 };
 
 const optimize = async (data) => {
-  const filesPath = `images/*.{jpg, jpeg, png}`
+  // const filesPath = `images/*.{jpg, jpeg, png}`
 	try {
-		await imagemin([filesPath], {
+		await imagemin(['images/*'], {
 			destination: './optimized',
 			plugins: [
 				imageminJpegtran(),
 				imageminMozjpeg({
-					quality: parseInt(data.quality)
+					quality: parseInt(data.quality),
 				})
 			]
 		})
