@@ -1,6 +1,6 @@
 ## CLI Image Optimizer
 
-With this tool you can optimize your images in bulk, you only have to put in a folder called images and the tool will optimize them for you.
+With this tool you can optimize your images in bulk, you only have to create a folder called images and put the images that you want to optimize inside.
 
 To run this tool you have to run the following commands:
 
